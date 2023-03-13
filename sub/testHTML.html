@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.0/themes/ui-lightness/jquery-ui.css" />
+<link rel="stylesheet" href="../css/testcss1.css">
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/jquery.js"></script>
+<title>GENESIS</title>
+
+</head>
+<!--머리 부분 -->
+<header>
+
+<nav class="navbar navbar-expand-lg">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#"><img alt="제네시스" src="../images/genesislogomini.png" width="100" height="25"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link active" aria-current="page" onclick="location.href = '../index.html'" style="cursor: pointer">홈으로</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://www.genesis.com/kr/ko/main.html">제조사 홈페이지</a></li>
+			</ul>
+		</div>
+		</div>
+</nav>
+</header>
+<!-- 바디 부분 -->
+<body>
+<!--배경화면 재생  -->
+	<div class="bg-video">
+		<video class="bg-video__content" autoplay muted width=100% height=100%>
+			<source src="../images/video/genevideo.mp4" type="video/mp4" />
+		</video>
+		<audio autoplay>
+			<source src="../images/sound/genesound.mp3" type="audio/mp3" />
+		</audio>
+	</div>
+<!-- 차량 리스트 -->
+	<div class="container-fluid" id="genelists" >
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="mb-3" id="cata">SEDAN<br/><hr/> </h2>
+		</div>
+	</div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="image-wrap-2">
+            <div class="image-info">
+              <h2 class="mb-3">G80</h2>
+            </div>
+            <img src="../images/G80rightside.png" alt="Image" class="img-fluid" id = "G80">
+          </div>
+       	<button id="butonG80" type="button" class="btn btn-outline-white py-2 px-4" data-bs-toggle="modal" data-bs-target="#G80info" ><span style="color: white">More Information</span></button>
+       </div>
+      </div>
+      <div class="row">
+		<div class="col-lg-12">
+			<h2 class="mb-3" id="cata">SUV<br/><hr/> </h2>
+		</div>
+		</div>
+        <div class="row">
+        <div class="col-lg-4">
+          <div class="image-wrap-2">
+            <div class="image-info">
+              <h2 class="mb-3">GV70</h2>
+            </div>
+             <img src="../images/GV70rightside.png" alt="Image" class="img-fluid" id="GV70">
+           </div>
+          <button id="butonGV70" type="button" class="btn btn-outline-white py-2 px-4" data-bs-toggle="modal" data-bs-target="#GV70info" ><span style="color: white">More Information</span></button>
+        </div>
+        <div class="col-lg-4">
+          <div class="image-wrap-2">
+            <div class="image-info">
+              <h2 class="mb-3">GV60</h2>
+            </div>
+            <img src="../images/GV60rightside.png" alt="Image" class="img-fluid" id="GV60">
+          </div>
+           <button id="butonGV60" type="button" class="btn btn-outline-white py-2 px-4" data-bs-toggle="modal" data-bs-target="#GV60info" ><span style="color: white">More Information</span></button>
+        </div>
+      </div>
+     </div>
+
+<!-- 차량 성능 모달 부분 -->
+	<div class="modal fade" id="G80info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">GENESIS G80 ELECTRIFIED</h5>
+						<h5 id="clock">clock</h5>
+							<script>
+        						var Target = document.getElementById("clock");
+        						function clock() {
+           							var time = new Date();
+            						var month = time.getMonth();
+            						var date = time.getDate();
+            						var day = time.getDay();
+            						var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+            						var hours = time.getHours();
+            						var minutes = time.getMinutes();
+           							var seconds = time.getSeconds();
+
+           						Target.innerText = 
+           						`${month + 1}월 ${date}일 ${week[day]}요일 ` +
+           						`${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+               
+       						}
+       						clock();
+       						setInterval(clock, 1000); // 1초마다 실행
+   							</script>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-left: 0px !important"></button>
+					</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<h3>소개</h3>
+						<div class="row">
+						<hr style="border: 1px solid black !important">
+							<div class="col-lg-6" style="margin: auto !important">
+								<img src="../images/G80back2.jpg" alt="image" class="img-fluid" style="height: 250pxs">
+							</div>
+							<div class="col-lg-6">
+								<h3>제네시스의 고급 전기차 세단 G80</h3>
+								<p>
+								제네시스의 최초의 전기 세단이자 고급형 라인업에 들어가는 G80
+							</div>
+						</div>
+						<hr>
+						<h3>기본 스팩</h3>
+						<div class="row">
+						<hr style="border: 1px solid black !important">
+						</div>
+						<div class="row">
+							<div class="col-lg-6" id="specifications">
+								<input type="button" value="제원" class="btn btn-dark"id="specificationsbtn">
+								<hr>
+										<table id="intro" style="border-radius: 30px">
+											<tr>
+												<th>전장(mm)</th>
+												<td>5,005</td>
+											</tr>
+											<tr>
+												<th>전폭(mm)</th>
+												<td>1,925</td>
+											</tr>
+											<tr>
+												<th>전고(mm)</th>
+												<td>1,475</td>
+											</tr>
+											<tr>
+												<th>축간거리(mm)</th>
+												<td>3,010</td>
+											</tr>
+											<tr>
+												<th>윤거 전(mm)</th>
+												<td>1,630</td>
+											</tr>
+											<tr>
+												<th>윤거 후(mm)</th>
+												<td>1,636</td>
+											</tr>
+											<tr>
+												<th>배터리 종류</th>
+												<td>리튬 이온</td>
+											</tr>
+											<tr>
+												<th>구동방식</th>
+												<td>AWD</td>
+											</tr>
+											<tr>
+												<th>배터리 용량</th>
+												<td>87.2 kWh</td>
+											</tr>
+											<tr>
+												<th>최고 출력</th>
+												<td>272 kW</td>
+											</tr>
+											<tr>
+												<th>최대 토크</th>
+												<td>700Nm</td>
+											</tr>
+										</table>
+								<script type="text/javascript">
+								$('#intro').hide();
+								$('#specificationsbtn').click(function(){
+									if($('#intro').is(':visible')){
+										$('#intro').hide();
+									}else{
+										$('#intro').show();
+									}
+								});
+								</script>
+							</div>
+							<div class="col-lg-6" id="Defaultspecification">
+								<input type="button" value="기본사양" class="btn btn-dark" id="Defaultspecificationbtn">
+									<hr>
+								<dl class="accordion" id="intro2">
+									<dt>
+										<table>
+											<th>파워트레인(PE 시스템) 및 성능</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>272kW 구동 모터 (전륜 136kW / 후륜 136kW 듀얼모터 사륜구동(AWD)
+													시스템)</td>
+											</tr>
+											<tr>
+												<td>87.2kWh 리튬 이온 배터리</td>
+											</tr>
+											<tr>
+												<td>감속기</td>
+											</tr>
+											<tr>
+												<td>400V/800V 멀티 충전 시스템</td>
+											</tr>
+											<tr>
+												<td>회생제동 시스템</td>
+											</tr>
+											<tr>
+												<td>프리뷰 전자제어 서스펜션</td>
+											</tr>
+											<tr>
+												<td>전륜 모노블럭(4P) 브레이크</td>
+											</tr>
+											<tr>
+												<td>통합주행모드</td>
+											</tr>
+											<tr>
+												<td>히트펌프 시스템</td>
+											</tr>
+											<tr>
+												<td>배터리 히팅 시스템</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												외관
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>Full LED 헤드램프</td>
+											</tr>
+											<tr>
+												<td>Full LED 리어 콤비 램프(방향지시등 포함)</td>
+											</tr>
+											<tr>
+												<td>245/45R19(앞), 275/40R19(뒤) 미쉐린 타이어, 휠</td>
+											</tr>
+											<tr>
+												<td>이중 접합 차음 유리(앞면, 전체 도어)</td>
+											</tr>
+											<tr>
+												<td>자외선 차단 유리(앞면, 뒷면, 전체 도어)</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												내장											
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>8인치 TFT LCD 클러스터</td>
+											</tr>
+											<tr>
+												<td>전자식 변속 다이얼(SBW)</td>
+											</tr>
+											<tr>
+												<td>제네시스 통합 컨트롤러</td>
+											</tr>
+											<tr>
+												<td>회생제동 컨트롤 패들쉬프트</td>
+											</tr>
+											<tr>
+												<td>하이 패스시스템</td>
+											</tr>
+											<tr>
+												<td>프레임리스 룸미러(ECM)</td>
+											</tr>
+											<tr>
+												<td>알류미늄 내장재</td>
+											</tr>
+											<tr>
+												<td>터치타입 공조 패널</td>
+											</tr>
+											<tr>
+												<td>앰비언트 무드램프</td>
+											</tr>
+											<tr>
+												<td>앞좌석 LED 풋램프</td>
+											</tr>
+											<tr>
+												<td>메탈 도어스커프</td>
+											</tr>
+											<tr>
+												<td>투톤 가죽 스티어링 휠(옵시디언 블랙 모노톤 선택시 모노톤으로 적용)</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												안전										
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>10 에어백 시스템(앞좌석 어드밴스드, 운전석 무릎, 앞좌석 센터 사이드, 앞&뒤 사이드, 전복 대응 커튼)</td>
+											</tr>
+											<tr>
+												<td>급제동 경보 기능</td>
+											</tr>
+											<tr>
+												<td>지능형 속도 제한 보조</td>
+											</tr>
+											<tr>
+												<td>차로 이탈방지 보조</td>
+											</tr>
+											<tr>
+												<td>진동경고 스티어링 휠</td>
+											</tr>
+											<tr>
+												<td>하이빔 보조</td>
+											</tr>
+											<tr>
+												<td>운전자 주의 경고</td>
+											</tr>
+											<tr>
+												<td>전방 충돌방지 보조 (차량, 보행자, 이륜차, 교차로 대향차)</td>
+											</tr>
+											<tr>
+												<td>후측방 충돌 방지 보조</td>
+											</tr>
+											<tr>
+												<td>후방 교차 충돌 방지 보조</td>
+											</tr>
+											<tr>
+												<td>후진 가이드 램프</td>
+											</tr>
+											<tr>
+												<td>안전 하차 보조</td>
+											</tr>
+											<tr>
+												<td>후석 승객 알림</td>
+											</tr>
+											<tr>
+												<td>다중 충돌방지 자동제동 시스템</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												편의											
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>앞좌석 스마트폰 무선 충전</td>
+											</tr>
+											<tr>
+												<td>제네시스 디지털 키</td>
+											</tr>
+											<tr>
+												<td>터치타입 아웃사이드 도어 핸들</td>
+											</tr>
+											<tr>
+												<td>전자식 파워 차일드 락</td>
+											</tr>
+											<tr>
+												<td>레인 센서</td>
+											</tr>
+											<tr>
+												<td>열선 & 전동식 조절 스티어링 휠</td>
+											</tr>
+											<tr>
+												<td>독립제어 풀오토 에어컨 (운전석 & 동승석 듀얼 풍향모드 제어, 후석 공조 전석 제어, 오토디포그, 외부공기 유입 방지 제어 포함)</td>
+											</tr>
+											<tr>
+												<td>공기 청정 시스템 (미세먼지 센서, 엔진룸 프리필터, 항균 처리 고성능 콤비 필터)</td>
+											</tr>
+											<tr>
+												<td>고속도로 주행 보조</td>
+											</tr>
+											<tr>
+												<td>스마트 크루즈 컨트롤 (Stop & Go 포함)</td>
+											</tr>
+											<tr>
+												<td>내비게이션 기반 스마트 크루즈 컨트롤 (안전구간, 곡선로)</td>
+											</tr>
+											<tr>
+												<td>차로 유지 보조</td>
+											</tr>
+											<tr>
+												<td>조향 연동 후방 모니터</td>
+											</tr>
+											<tr>
+												<td>전동식 파킹 브레이크 (오토홀드 포함)</td>
+											</tr>
+											<tr>
+												<td>앞좌석 & 뒷좌석 파워 세이프티 윈도우</td>
+											</tr>
+											<tr>
+												<td>전방/후방 주차 거리 경고</td>
+											</tr>
+											<tr>
+												<td>스마트 전동식 트렁크</td>
+											</tr>
+											<tr>
+												<td>실외 V2L (Vehicle to Load) 젠더</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												시트										
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>천연 가죽 시트</td>
+											</tr>
+											<tr>
+												<td>운전석 전동시트 (12방향, 럼버서포트 포함)</td>
+											</tr>
+											<tr>
+												<td>동승석 전동시트 (12방향, 럼버서포트 포함)</td>
+											</tr>
+											<tr>
+												<td>동승석 워크인 디바이스</td>
+											</tr>
+											<tr>
+												<td>운전석 자세 메모리 시스템 (스마트 자세제어 시스템 포함)</td>
+											</tr>
+											<tr>
+												<td>앞좌석 통풍 & 열선 시트</td>
+											</tr>
+											<tr>
+												<td>뒷좌석 열선 시트</td>
+											</tr>
+											<tr>
+												<td>뒷좌석 스키쓰루</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												인포테인먼트											
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>제네시스 인포테인먼트 시스템 (14.5인치 디스플레이, Genesis Connected Services, 제네시스 카페이, 발레모드, 뮤직 스트리밍 서비스)</td>
+											</tr>
+											<tr>
+												<td>내비게이션 자동 무선 업데이트</td>
+											</tr>
+											<tr>
+												<td>렉시콘 17 스피커 시스템 (퀀텀 로직 서라운드)</td>
+											</tr>
+											<tr>
+												<td>액티브 로드 노이즈 컨트롤</td>
+											</tr>
+										</table>
+									</dd>
+								</dl>
+								<script type="text/javascript">
+								$('#intro2').hide();
+								$('#Defaultspecificationbtn').click(function(){
+									if($('#intro2').is(':visible')){
+										$('#intro2').hide();
+									}else{
+										$('#intro2').show();
+									}
+								});
+								</script>
+							</div>
+							</div>
+							<h3>연비</h3>
+							<div class="row">
+							<hr style="border: 1px solid black !important">
+							<div class="col-lg-5">
+							<table border="1" id="kh">
+								<tr>
+									<th rowspan="2">타이어</th>
+									<th rowspan="2">연료</th>
+									<th rowspan="2">공차중량</th>
+									<th rowspan="2">전압(V)/용량(AH)</th>
+								</tr>
+								<tr>
+								
+								</tr>
+								<tr>
+									<td>19인치</td>
+									<td>전기</td>
+									<td>2,265</td>
+									<td>522.7/166.8</td>
+								</tr>
+							</table>
+							</div>
+							<div class="col-lg-7">
+							<table	border="1" id="kh">
+								<tr>
+									<th colspan="3">에너지 소비효율(연비)(KM/KWH)</th>
+									<th colspan="3">1회 충전 주행거리</th>
+								</tr>
+								<tr>
+									<th>도심</th>
+									<th>고속도로</th>
+									<th>복합</th>
+									<th>도심</th>
+									<th>고속도로</th>
+									<th>복합</th>
+								</tr>
+								<tr>
+									<td>4.5</td>
+									<td>4.1</td>
+									<td>4.3</td>
+									<td>446</td>
+									<td>404</td>
+									<td>427</td>
+								</tr>
+							
+							</table>
+						</div>
+						<hr>
+						<h3>리뷰 영상</h3>
+						<div class="row">
+						<hr style="border: 1px solid black !important;">
+							<div class="col-lg-12" id="review">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/TiA1gogwVso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="modal fade" id="GV70info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">제네시스 GV70</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"aria-label="Close"></button>
+				</div>
+					<div class="modal-body">
+					<div class="container-fluid">
+						<h3>소개</h3>
+						<div class="row">
+						<hr style="border: 1px solid black !important">
+							<div class="col-lg-6" style="margin: auto !important">
+								<img src="../images/GV70side.jpg" alt="image" class="img-fluid" style="height: 250px; margin: auto !important">
+							</div>
+							<div class="col-lg-6">
+								<h3>제네시스의 고급 전기차 SUV GV70</h3>
+								<p>
+								<h6>역동적인 외관과 여백의 미를 강조한 여유롭고 균형 잡힌 실내,</h6> 
+								<p>
+								<h6>운전자를 배려한 신기술,</h6>
+								<p>
+								<h6>그리고 뛰어난 동력 성능까지 갖춘 럭셔리 전동화 SUV입니다.</h6>
+							</div>
+						</div>
+					<hr>
+				<h3>기본 스팩</h3>
+					<div class="row">
+						<hr style="border: 1px solid black !important">
+							<div class="col-lg-6" id="specifications">
+								<input type="button" value="제원" class="btn btn-dark"id="specificationsbtn2">
+									<hr>
+										<table id="intro3" style="border-radius: 30px">
+											<tr>
+												<th>전장(mm)</th>
+												<td>4,715</td>
+											</tr>
+											<tr>
+												<th>전폭(mm)</th>
+												<td>1,910</td>
+											</tr>
+											<tr>
+												<th>전고(mm)</th>
+												<td>1,630</td>
+											</tr>
+											<tr>
+												<th>축간거리(mm)</th>
+												<td>2,875</td>
+											</tr>
+											<tr>
+												<th>윤거 전(mm)</th>
+												<td>1,647</td>
+											</tr>
+											<tr>
+												<th>윤거 후(mm)</th>
+												<td>1,661</td>
+											</tr>
+											<tr>
+												<th>배터리 종류</th>
+												<td>리튬 이온</td>
+											</tr>
+											<tr>
+												<th>구동방식</th>
+												<td>AWD</td>
+											</tr>
+											<tr>
+												<th>배터리 용량</th>
+												<td>77.4 kWh</td>
+											</tr>
+											<tr>
+												<th>최고 출력</th>
+												<td>320 kW</td>
+											</tr>
+											<tr>
+												<th>최대 토크</th>
+												<td>700Nm</td>
+											</tr>
+										</table>
+									<script type="text/javascript">
+										$('#intro3').hide();
+										$('#specificationsbtn2').click(function(){
+											if($('#intro3').is(':visible')){
+												$('#intro3').hide();
+											}else{
+												$('#intro3').show();
+											}
+										});
+									</script>
+								</div>
+							<div class="col-lg-6" id="Defaultspecification2">
+								<input type="button" value="기본사양" class="btn btn-dark" id="Defaultspecificationbtn2">
+									<hr>
+								<dl class="accordion" id="intro4">
+									<dt>
+										<table>
+											<th>파워트레인(PE 시스템) 및 성능</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>320kW 구동 모터(전륜 160kW / 후륜 160kW 듀얼모터 사륜구동(AWD) 시스템, e-터레인 모드 포함)</td>
+											</tr>
+											<tr>
+												<td>77.4kWh 리튬 이온 배터리</td>
+											</tr>
+											<tr>
+												<td>감속기</td>
+											</tr>
+											<tr>
+												<td>400V/800V 멀티 충전 시스템</td>
+											</tr>
+											<tr>
+												<td>회생제동 시스템</td>
+											</tr>
+											<tr>
+												<td>프리뷰 전자제어 서스펜션</td>
+											</tr>
+											<tr>
+												<td>전륜 모노블럭(4P) 브레이크(후륜 스타일링 커버 포함)</td>
+											</tr>
+											<tr>
+												<td>통합주행모드</td>
+											</tr>
+											<tr>
+												<td>히트펌프 시스템</td>
+											</tr>
+											<tr>
+												<td>배터리 히팅 시스템</td>
+											</tr>
+											<tr>
+												<td>부스트 모드</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												외관
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>Full LED 헤드램프</td>
+											</tr>
+											<tr>
+												<td>Full LED 리어 콤비 램프</td>
+											</tr>
+											<tr>
+												<td>235/55R19 미쉐린 타이어, 휠</td>
+											</tr>
+											<tr>
+												<td>이중 접합 차음 유리(앞면, 전체 도어)</td>
+											</tr>
+											<tr>
+												<td>자외선 차단 유리(앞면, 뒷면, 전체 도어)</td>
+											</tr>
+											<tr>
+												<td>루프랙</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												내장											
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>8인치 TFT LCD 클러스터</td>
+											</tr>
+											<tr>
+												<td>전자식 변속 다이얼(SBW)</td>
+											</tr>
+											<tr>
+												<td>제네시스 통합 컨트롤러</td>
+											</tr>
+											<tr>
+												<td>회생제동 컨트롤 패들쉬프트</td>
+											</tr>
+											<tr>
+												<td>하이패스 시스템</td>
+											</tr>
+											<tr>
+												<td>프레임리스 룸미러(ECM)</td>
+											</tr>
+											<tr>
+												<td>포그 브러쉬 패턴 알루미늄 가니쉬</td>
+											</tr>
+											<tr>
+												<td>터치타입 공조 패널</td>
+											</tr>
+											<tr>
+												<td>앰비언트 무드램프</td>
+											</tr>
+											<tr>
+												<td>앞좌석 LED 풋램프</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												안전										
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>8 에어백 시스템(앞좌석 어드밴스드, 운전석 무릎, 앞좌석 센터 사이드, 앞좌석 사이드, 전복 대응 커튼)</td>
+											</tr>
+											<tr>
+												<td>급제동 경보 기능</td>
+											</tr>
+											<tr>
+												<td>진동경고 스티어링 휠</td>
+											</tr>
+											<tr>
+												<td>후진 가이드 램프</td>
+											</tr>
+											<tr>
+												<td>어드밴스드 후석 승객 알림</td>
+											</tr>
+											<tr>
+												<td>다중 충돌방지 자동제동 시스템</td>
+											</tr>
+											<tr>
+												<td>차로 이탈방지 보조</td>
+											</tr>
+											<tr>
+												<td>하이빔 보조</td>
+											</tr>
+											<tr>
+												<td>운전자 주의 경고</td>
+											</tr>
+											<tr>
+												<td>전방 충돌방지 보조 (차량, 보행자, 이륜차, 교차로 대향차)</td>
+											</tr>
+											<tr>
+												<td>후측방 충돌 방지 보조</td>
+											</tr>
+											<tr>
+												<td>후방 교차 충돌 방지 보조</td>
+											</tr>
+											<tr>
+												<td>안전 하차 보조</td>
+											</tr>
+											<tr>
+												<td>지능형 속도 제한 보조</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												편의											
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>앞좌석 스마트폰 무선 충전</td>
+											</tr>
+											<tr>
+												<td>제네시스 디지털 키</td>
+											</tr>
+											<tr>
+												<td>터치타입 아웃사이드 도어 핸들</td>
+											</tr>
+											<tr>
+												<td>전자식 파워 차일드 락</td>
+											</tr>
+											<tr>
+												<td>레인 센서</td>
+											</tr>
+											<tr>
+												<td>열선 & 전동식 조절 스티어링 휠</td>
+											</tr>
+											<tr>
+												<td>독립제어 풀오토 에어컨 (운전석 & 동승석 듀얼 풍향모드 제어, 후석 공조 전석 제어, 오토디포그, 외부공기 유입 방지 제어 포함)</td>
+											</tr>
+											<tr>
+												<td>공기 청정 시스템 (미세먼지 센서, 엔진룸 프리필터, 항균 처리 고성능 콤비 필터)</td>
+											</tr>
+											<tr>
+												<td>고속도로 주행 보조</td>
+											</tr>
+											<tr>
+												<td>스마트 크루즈 컨트롤 (Stop & Go 포함)</td>
+											</tr>
+											<tr>
+												<td>내비게이션 기반 스마트 크루즈 컨트롤 (안전구간, 곡선로)</td>
+											</tr>
+											<tr>
+												<td>차로 유지 보조</td>
+											</tr>
+											<tr>
+												<td>조향 연동 후방 모니터</td>
+											</tr>
+											<tr>
+												<td>전동식 파킹 브레이크 (오토홀드 포함)</td>
+											</tr>
+											<tr>
+												<td>앞좌석 & 뒷좌석 파워 세이프티 윈도우</td>
+											</tr>
+											<tr>
+												<td>전방/후방 주차 거리 경고</td>
+											</tr>
+											<tr>
+												<td>스마트 파워 테일게이드</td>
+											</tr>
+											<tr>
+												<td>실내 V2L (러기지) 젠더</td>
+											</tr>
+											<tr>
+												<td>실외 V2L (Vehicle to Load) 젠더</td>
+											</tr>
+											<tr>
+												<td>기차 액티브 사운드 디자인(e-ASD)</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												시트										
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>천연 가죽 시트</td>
+											</tr>
+											<tr>
+												<td>운전석 전동시트 (12방향, 럼버서포트 포함)</td>
+											</tr>
+											<tr>
+												<td>동승석 전동시트 (8방향, 럼버서포트 포함)</td>
+											</tr>
+											<tr>
+												<td>동승석 워크인 디바이스</td>
+											</tr>
+											<tr>
+												<td>운전석 자세 메모리 시스템 (스마트 자세제어 시스템 포함)</td>
+											</tr>
+											<tr>
+												<td>앞좌석 통풍 & 열선 시트</td>
+											</tr>
+											<tr>
+												<td>뒷좌석 열선 시트</td>
+											</tr>
+											<tr>
+												<td>뒷좌석 수동 리클라이닝</td>
+											</tr>
+											<tr>
+												<td>뒷자석 6:4 폴딩</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												인포테인먼트											
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>제네시스 인포테인먼트 시스템 (14.5인치 디스플레이, Genesis Connected Services, 제네시스 카페이, 발레모드, 뮤직 스트리밍 서비스)</td>
+											</tr>
+											<tr>
+												<td>내비게이션 자동 무선 업데이트</td>
+											</tr>
+											<tr>
+												<td> 8 스피커 시스템</td>
+											</tr>
+										</table>
+									</dd>
+								</dl>
+								<script type="text/javascript">
+								$('#intro4').hide();
+								$('#Defaultspecificationbtn2').click(function(){
+									if($('#intro4').is(':visible')){
+										$('#intro4').hide();
+									}else{
+										$('#intro4').show();
+									}
+								});
+								</script>
+							</div>
+						</div>
+						<h3>연비</h3>
+							<div class="row">
+							<hr style="border: 1px solid black !important">
+							<div class="col-lg-5">
+							<table border="1" id="kh">
+								<tr>
+									<th rowspan="2">타이어</th>
+									<th rowspan="2">연료</th>
+									<th rowspan="2">공차중량</th>
+									<th rowspan="2">전압(V)/용량(AH)</th>
+								</tr>
+								<tr>
+								
+								</tr>
+								<tr>
+									<td>19인치</td>
+									<td>전기</td>
+									<td>2,230</td>
+									<td>697/111.2</td>
+								</tr>
+									<tr>
+									<td>20인치</td>
+									<td>전기</td>
+									<td>2,245</td>
+									<td>697/111.2</td>
+								</tr>
+							</table>
+							</div>
+							<div class="col-lg-7">
+							<table	border="1" id="kh">
+								<tr>
+									<th rowspan="2">타이어</th>
+									<th colspan="3">에너지 소비효율(연비)(KM/KWH)</th>
+									<th rowspan="2">1회 충전 주행거리</th>
+								</tr>
+								<tr>
+									<th>도심</th>
+									<th>고속도로</th>
+									<th>복합</th>
+								</tr>
+								<tr>
+									<td>19인치</td>
+									<td>5.0</td>
+									<td>4.1</td>
+									<td>4.6</td>
+									<td>400</td>
+								</tr>
+								<tr>
+									<td>20인치</td>
+									<td>4.5</td>
+									<td>4.1</td>
+									<td>4.3</td>
+									<td>373</td>
+								</tr>
+							
+							</table>
+						</div>
+						</div>
+						<hr>
+						<h3>리뷰 영상</h3>
+						<div class="row">
+						<hr style="border: 1px solid black !important;">
+							<div class="col-lg-12" id="review">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/0uXooqIT9Qw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+			<div class="modal fade" id="GV60info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">제네시스 GV60</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"aria-label="Close"></button>
+				</div>
+					<div class="modal-body">
+					<div class="container-fluid">
+						<h3>소개</h3>
+						<div class="row">
+						<hr style="border: 1px solid black !important">
+							<div class="col-lg-6" style="margin: auto !important">
+								<video src="../images/video/GV60movies2.mp4" poster="대체할 이미지 경로" width="530" height="350" loop autoplay muted></video>
+							</div>
+							<div class="col-lg-6">
+								<h3>제네시스의 전기차 SUV GV60</h3>
+								<p>
+								<h6>GV60는 제네시스 브랜드 전동화를 대표하는</h6>
+								<p>
+								<h6>브랜드의 첫 전용 전기차 모델이자 가장 역동적인 디자인을 보여주는 모델입니다.</h6>
+							</div>
+						</div>
+					<hr>
+				<h3>기본 스팩</h3>
+					<div class="row">
+						<hr style="border: 1px solid black !important">
+							<div class="col-lg-6" id="specifications">
+								<input type="button" value="제원" class="btn btn-dark"id="specificationsbtn3">
+									<hr>
+										<table id="intro5" style="border-radius: 30px">
+											<tr>
+												<th>전장(mm)</th>
+												<td>4,515</td>
+											</tr>
+											<tr>
+												<th>전폭(mm)</th>
+												<td>1,890</td>
+											</tr>
+											<tr>
+												<th>전고(mm)</th>
+												<td>1,580</td>
+											</tr>
+											<tr>
+												<th>축간거리(mm)</th>
+												<td>2,900</td>
+											</tr>
+											<tr>
+												<th>윤거 전(mm)</th>
+												<td>1,633</td>
+											</tr>
+											<tr>
+												<th>윤거 후(mm)</th>
+												<td>1,642</td>
+											</tr>
+											<tr>
+												<th>배터리 종류</th>
+												<td>리튬 이온</td>
+											</tr>
+											<tr>
+												<th>구동방식</th>
+												<td>2WD</td>
+											</tr>
+											<tr>
+												<th>배터리 용량</th>
+												<td>77.4 kWh</td>
+											</tr>
+											<tr>
+												<th>최고 출력</th>
+												<td>167 kW(후륜)</td>
+											</tr>
+											<tr>
+												<th>최대 토크</th>
+												<td>350Nm(후륜)</td>
+											</tr>
+										</table>
+									<script type="text/javascript">
+										$('#intro5').hide();
+										$('#specificationsbtn3').click(function(){
+											if($('#intro5').is(':visible')){
+												$('#intro5').hide();
+											}else{
+												$('#intro5').show();
+											}
+										});
+									</script>
+								</div>
+							<div class="col-lg-6" id="Defaultspecification3">
+								<input type="button" value="기본사양" class="btn btn-dark" id="Defaultspecificationbtn3">
+									<hr>
+								<dl class="accordion" id="intro6">
+									<dt>
+										<table>
+											<th>파워트레인(PE 시스템) 및 성능</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>차세대 일체형 PE 시스템(후륜 168kW 모터, 감속기, 인버터)</td>
+											</tr>
+											<tr>
+												<td>77.4kWh 리튬 이온 배터리</td>
+											</tr>
+											<tr>
+												<td>400V/800V 멀티 충전 시스템</td>
+											</tr>
+											<tr>
+												<td>회생제동 시스템</td>
+											</tr>
+											<tr>
+												<td>통합주행모드</td>
+											</tr>
+											<tr>
+												<td>히트펌프 시스템</td>
+											</tr>
+											<tr>
+												<td>배터리 히팅 시스템</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												외관
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>Full LED 헤드램프</td>
+											</tr>
+											<tr>
+												<td>Full LED 리어 콤비 램프</td>
+											</tr>
+											<tr>
+												<td>235/55R19 미쉐린 타이어, 휠</td>
+											</tr>
+											<tr>
+												<td>이중 접합 차음 유리(앞면, 전체 도어)</td>
+											</tr>
+											<tr>
+												<td>자외선 차단 유리(앞면)</td>
+											</tr>
+											<tr>
+												<td>다이내믹 웰컴 라이트</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												내장											
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>12.3인치 TFT LCD 클러스터</td>
+											</tr>
+											<tr>
+												<td>크리스탈 스피어(SBW)</td>
+											</tr>
+											<tr>
+												<td>제네시스 통합 컨트롤러</td>
+											</tr>
+											<tr>
+												<td>회생제동 컨트롤 패들쉬프트</td>
+											</tr>
+											<tr>
+												<td>하이패스 시스템</td>
+											</tr>
+											<tr>
+												<td>프레임리스 룸미러(ECM)</td>
+											</tr>
+											<tr>
+												<td>터치타입 공조 패널</td>
+											</tr>
+											<tr>
+												<td>앰비언트 무드램프</td>
+											</tr>
+											<tr>
+												<td>앞좌석 LED 풋램프</td>
+											</tr>
+											<tr>
+												<td>메탈 도어스커프</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												안전										
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>8 에어백 시스템(앞좌석 어드밴스드, 운전석 무릎, 앞좌석 센터 사이드, 앞좌석 사이드, 전복 대응 커튼)</td>
+											</tr>
+											<tr>
+												<td>급제동 경보 기능</td>
+											</tr>
+											<tr>
+												<td>진동경고 스티어링 휠</td>
+											</tr>
+											<tr>
+												<td>후진 가이드 램프</td>
+											</tr>
+											<tr>
+												<td>어드밴스드 후석 승객 알림</td>
+											</tr>
+											<tr>
+												<td>다중 충돌방지 자동제동 시스템</td>
+											</tr>
+											<tr>
+												<td>차로 이탈방지 보조</td>
+											</tr>
+											<tr>
+												<td>하이빔 보조</td>
+											</tr>
+											<tr>
+												<td>운전자 주의 경고</td>
+											</tr>
+											<tr>
+												<td>전방 충돌방지 보조 (차량, 보행자, 이륜차, 교차로 대향차)</td>
+											</tr>
+											<tr>
+												<td>후측방 충돌 방지 보조</td>
+											</tr>
+											<tr>
+												<td>후방 교차 충돌 방지 보조</td>
+											</tr>
+											<tr>
+												<td>안전 하차 보조</td>
+											</tr>
+											<tr>
+												<td>지능형 속도 제한 보조</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												편의											
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>앞좌석 스마트폰 무선 충전</td>
+											</tr>
+											<tr>
+												<td>전자식 파워 차일드 락</td>
+											</tr>
+											<tr>
+												<td>레인 센서</td>
+											</tr>
+											<tr>
+												<td>열선 스티어링 휠</td>
+											</tr>
+											<tr>
+												<td>실내 지문 인증 시스템</td>
+											</tr>
+											<tr>
+												<td>독립제어 풀오토 에어컨 (운전석 & 동승석 듀얼 풍향모드 제어, 후석 공조 전석 제어, 오토디포그, 외부공기 유입 방지 제어, 에프터 블로우 포함)</td>
+											</tr>
+											<tr>
+												<td>공기 청정 시스템 (미세먼지 센서, 엔진룸 프리필터, 항균 처리 고성능 콤비 필터)</td>
+											</tr>
+											<tr>
+												<td>고속도로 주행 보조</td>
+											</tr>
+											<tr>
+												<td>스마트 크루즈 컨트롤 (Stop & Go 포함)</td>
+											</tr>
+											<tr>
+												<td>내비게이션 기반 스마트 크루즈 컨트롤 (안전구간, 곡선로)</td>
+											</tr>
+											<tr>
+												<td>차로 유지 보조</td>
+											</tr>
+											<tr>
+												<td>조향 연동 후방 모니터</td>
+											</tr>
+											<tr>
+												<td>전동식 파킹 브레이크 (오토홀드 포함)</td>
+											</tr>
+											<tr>
+												<td>앞좌석 & 뒷좌석 파워 세이프티 윈도우</td>
+											</tr>
+											<tr>
+												<td>전방/후방 주차 거리 경고</td>
+											</tr>
+											<tr>
+												<td>스마트 파워 테일게이드</td>
+											</tr>
+											<tr>
+												<td>실내 V2L (러기지) 젠더</td>
+											</tr>
+											<tr>
+												<td>디퓨져 (동승석 도어 트림 탈부착형)</td>
+											</tr>
+											<tr>
+												<td>기차 액티브 사운드 디자인(e-ASD)</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												시트										
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>인조 가죽 시트</td>
+											</tr>
+											<tr>
+												<td>운전석 전동시트 (12방향, 럼버서포트 포함)</td>
+											</tr>
+											<tr>
+												<td>동승석 전동시트 (8방향, 럼버서포트 포함)</td>
+											</tr>
+											<tr>
+												<td>앞좌석 통풍 & 열선 시트</td>
+											</tr>
+											<tr>
+												<td>뒷좌석 열선 시트</td>
+											</tr>
+											<tr>
+												<td>뒷자석 6:4 폴딩</td>
+											</tr>
+										</table>
+									</dd>
+									<dt>
+										<table>
+											<th>
+												인포테인먼트											
+											</th>
+										</table>
+									</dt>
+									<dd>
+										<table>
+											<tr>
+												<td>제네시스 인포테인먼트 시스템 (14.5인치 디스플레이, Genesis Connected Services, 제네시스 카페이, 발레모드, 뮤직 스트리밍 서비스)</td>
+											</tr>
+											<tr>
+												<td>무선 소프트웨어 업데이트(OTA software Update)</td>
+											</tr>
+											<tr>
+												<td>레퍼런스 8 스피커 시스템</td>
+											</tr>
+										</table>
+									</dd>
+								</dl>
+								<script type="text/javascript">
+								$('#intro6').hide();
+								$('#Defaultspecificationbtn3').click(function(){
+									if($('#intro6').is(':visible')){
+										$('#intro6').hide();
+									}else{
+										$('#intro6').show();
+									}
+								});
+								</script>
+							</div>
+						</div>
+						<h3>연비</h3>
+						<hr style="border: 1px solid black !important">
+							<div class="row">
+							<h4>스탠다드</h4>
+							<h5>2WD(후륜)</h5>
+							<hr style="border: 1px solid black !important">
+							<div class="col-lg-5">
+							<table border="1" id="kh">
+								<tr>
+									<th rowspan="2">타이어</th>
+									<th rowspan="2">연료</th>
+									<th rowspan="2">공차중량</th>
+									<th rowspan="2">전압(V)/용량(AH)</th>
+								</tr>
+								<tr></tr>
+								<tr>
+									<td>19인치</td>
+									<td>전기</td>
+									<td>1,985</td>
+									<td>697/111.2</td>
+								</tr>
+							</table>
+							</div>
+							<div class="col-lg-7">
+							<table	border="1" id="kh">
+								<tr>
+									<th rowspan="2">타이어</th>
+									<th colspan="3">에너지 소비효율(연비)(KM/KWH)</th>
+									<th rowspan="2">1회 충전 주행거리</th>
+								</tr>
+								<tr>
+									<th>도심</th>
+									<th>고속도로</th>
+									<th>복합</th>
+								</tr>
+								<tr>
+									<td>19인치</td>
+									<td>5.7</td>
+									<td>4.5</td>
+									<td>5.1</td>
+									<td>451</td>
+								</tr>
+							</table>
+						</div>
+						</div>
+						<div class="row">
+							<h5>AWD</h5>
+							<hr style="border: 1px solid black !important">
+							<div class="col-lg-5">
+							<table border="1" id="kh">
+								<tr>
+									<th rowspan="2">타이어</th>
+									<th rowspan="2">연료</th>
+									<th rowspan="2">공차중량</th>
+									<th rowspan="2">전압(V)/용량(AH)</th>
+								</tr>
+								<tr></tr>
+								<tr>
+									<td>19인치</td>
+									<td>전기</td>
+									<td>2,095</td>
+									<td>697/111.2</td>
+								</tr>
+								<tr>
+									<td>20인치</td>
+									<td>전기</td>
+									<td>2,100</td>
+									<td>697/111.2</td>
+								</tr>
+							</table>
+							</div>
+							<div class="col-lg-7">
+							<table	border="1" id="kh">
+								<tr>
+									<th rowspan="2">타이어</th>
+									<th colspan="3">에너지 소비효율(연비)(KM/KWH)</th>
+									<th rowspan="2">1회 충전 주행거리</th>
+								</tr>
+								<tr>
+									<th>도심</th>
+									<th>고속도로</th>
+									<th>복합</th>
+								</tr>
+								<tr>
+									<td>19인치</td>
+									<td>4.8</td>
+									<td>4.1</td>
+									<td>4.5</td>
+									<td>400</td>
+								</tr>
+								<tr>
+									<td>20인치</td>
+									<td>4.6</td>
+									<td>4.0</td>
+									<td>4.3</td>
+									<td>380</td>
+								</tr>
+							</table>
+						</div>
+						</div>
+						<hr style="border: 1px solid black !important">
+							<div class="row">
+							<h4>퍼포먼스</h4>
+							<h5>AWD</h5>
+							<hr style="border: 1px solid black !important">
+							<div class="col-lg-5">
+							<table border="1" id="kh">
+								<tr>
+									<th rowspan="2">타이어</th>
+									<th rowspan="2">연료</th>
+									<th rowspan="2">공차중량</th>
+									<th rowspan="2">전압(V)/용량(AH)</th>
+								</tr>
+								<tr></tr>
+								<tr>
+									<td>21인치</td>
+									<td>전기</td>
+									<td>2,160</td>
+									<td>697/111.2</td>
+								</tr>
+							</table>
+							</div>
+							<div class="col-lg-7">
+							<table	border="1" id="kh">
+								<tr>
+									<th rowspan="2">타이어</th>
+									<th colspan="3">에너지 소비효율(연비)(KM/KWH)</th>
+									<th rowspan="2">1회 충전 주행거리</th>
+								</tr>
+								<tr>
+									<th>도심</th>
+									<th>고속도로</th>
+									<th>복합</th>
+								</tr>
+								<tr>
+									<td>21인치</td>
+									<td>4.3</td>
+									<td>3.8</td>
+									<td>4.1</td>
+									<td>368</td>
+								</tr>
+							</table>
+						</div>
+						</div>
+						<hr>
+						<h3>리뷰 영상</h3>
+						<div class="row">
+						<hr style="border: 1px solid black !important;">
+							<div class="col-lg-12" id="review">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/H5307dcRISk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<!-- Option 2: Separate Popper and Bootstrap JS -->
+	<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+	-->
+</body>
+</html>

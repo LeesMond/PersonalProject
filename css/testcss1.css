@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+body {
+	background: black;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.bg-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 900px;
+	width: 100%;
+	z-index: -1;
+	opacity: 0.55;
+}
+a{
+	color: white !important;
+}
+#name{
+	margin: auto;
+	text-align: center;
+	font-size: 60px;
+	color: #ffffff;
+}
+#genelists{
+	display: block;
+	text-align: center;
+	margin: auto;
+	margin-top: 5%;
+	width: 80%;
+	animation: fadein 4s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+h2{
+	color: white;
+}
+#butonG80{
+	border: 1px solid white !important;
+}
+#butonGV70{
+	border: 1px solid white;
+}
+#butonGV60{
+	border: 1px solid white;
+}
+#G80{
+	margin-top: 29px;
+}
+#GV70{
+	margin-top: 7px;
+}
+
+#cata{
+	margin: auto;
+	text-align: left;
+	font-size: 60px;
+	color: #ffffff;
+}
+hr{
+	border: 1px solid white;
+}
+#clock{
+	color: black;
+}
+#charge{
+	object-fit: cover;
+}
+#specifications{
+	text-align: center;
+	align-items: center;
+}
+#Defaultspecification{
+	text-align: center;
+	align-items: center;
+}
+#specifications2{
+	text-align: center;
+	align-items: center;
+}
+#Defaultspecification2{
+	text-align: center;
+	align-items: center;
+}
+#specifications3{
+	text-align: center;
+	align-items: center;
+}
+#Defaultspecification3{
+	text-align: center;
+	align-items: center;
+}
+#intro{
+	align-items: center;
+	text-align: center;
+	margin: auto;
+}
+#intro2{
+	align-items: center;
+	text-align: center;
+	margin: auto;
+}
+#intro3{
+	align-items: center;
+	text-align: center;
+	margin: auto;
+}
+#kh{
+	margin: auto;
+	width: 100%;
+	text-align: center;
+}
+table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #fff;
+    border-spacing: 1px;
+    font-family: 'Cairo', sans-serif;
+  	margin: auto;
+  	border-radius: 30% !important;
+}
+table td {
+    padding: 10px;
+    background-color: #eee;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid white;
+}
+#review{
+	margin: auto;
+	align-items: center;
+	text-align: center;
+}
